@@ -1,0 +1,323 @@
+2023-08-23 21:53:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CATEGORIAS" not found (this database is empty); SQL statement:
+select c1_0.id,c1_0.descricao,c1_0.nome from categorias c1_0 where c1_0.nome like ? escape '!' [42104-214]
+2023-08-23 21:56:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CATEGORIAS" not found (this database is empty); SQL statement:
+select c1_0.id,c1_0.descricao,c1_0.nome from categorias c1_0 where c1_0.nome like ? escape '!' [42104-214]
+2023-08-25 12:01:27 database: wrong user or password; user: "SA"
+org.h2.message.DbException: Wrong user name or password [28000-214]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.engine.Engine.openSession(Engine.java:154)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:808)
+	at org.h2.server.web.WebApp.login(WebApp.java:1033)
+	at org.h2.server.web.WebApp.process(WebApp.java:226)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.JakartaWebServlet.doGet(JakartaWebServlet.java:129)
+	at org.h2.server.web.JakartaWebServlet.doPost(JakartaWebServlet.java:166)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Wrong user name or password [28000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:510)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 50 more
+2024-08-17 19:37:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    create table [*]order (\000a        id bigint generated by default as identity,\000a        date_time timestamp(6),\000a        id_user bigint,\000a        primary key (id)\000a    )"; expected "identifier"; SQL statement:
+
+    create table order (
+        id bigint generated by default as identity,
+        date_time timestamp(6),
+        id_user bigint,
+        primary key (id)
+    ) [42001-214]
+2024-08-17 19:37:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    alter table if exists [*]order \000a       add constraint FKddb5m8ngt9gw2s99enl8odi20 \000a       foreign key (id_user) \000a       references users"; expected "identifier"; SQL statement:
+
+    alter table if exists order 
+       add constraint FKddb5m8ngt9gw2s99enl8odi20 
+       foreign key (id_user) 
+       references users [42001-214]
+2024-08-17 19:37:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    alter table if exists order_item \000a       add constraint FKt6wv8m7eshksp5kp8w4b2d1dm \000a       foreign key (order_id) \000a       references [*]order"; expected "identifier"; SQL statement:
+
+    alter table if exists order_item 
+       add constraint FKt6wv8m7eshksp5kp8w4b2d1dm 
+       foreign key (order_id) 
+       references order [42001-214]
+2024-08-17 20:34:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    create table [*]order (\000a        id bigint generated by default as identity,\000a        date_time timestamp(6),\000a        id_user bigint,\000a        primary key (id)\000a    )"; expected "identifier"; SQL statement:
+
+    create table order (
+        id bigint generated by default as identity,
+        date_time timestamp(6),
+        id_user bigint,
+        primary key (id)
+    ) [42001-214]
+2024-08-17 20:34:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    alter table if exists [*]order \000a       add constraint FKddb5m8ngt9gw2s99enl8odi20 \000a       foreign key (id_user) \000a       references users"; expected "identifier"; SQL statement:
+
+    alter table if exists order 
+       add constraint FKddb5m8ngt9gw2s99enl8odi20 
+       foreign key (id_user) 
+       references users [42001-214]
+2024-08-17 20:34:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    alter table if exists order_item \000a       add constraint FKt6wv8m7eshksp5kp8w4b2d1dm \000a       foreign key (order_id) \000a       references [*]order"; expected "identifier"; SQL statement:
+
+    alter table if exists order_item 
+       add constraint FKt6wv8m7eshksp5kp8w4b2d1dm 
+       foreign key (order_id) 
+       references order [42001-214]
+2024-08-17 20:36:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    create table [*]order (\000a        id bigint generated by default as identity,\000a        date_time timestamp(6),\000a        id_user bigint,\000a        primary key (id)\000a    )"; expected "identifier"; SQL statement:
+
+    create table order (
+        id bigint generated by default as identity,
+        date_time timestamp(6),
+        id_user bigint,
+        primary key (id)
+    ) [42001-214]
+2024-08-17 20:36:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    alter table if exists [*]order \000a       add constraint FKddb5m8ngt9gw2s99enl8odi20 \000a       foreign key (id_user) \000a       references users"; expected "identifier"; SQL statement:
+
+    alter table if exists order 
+       add constraint FKddb5m8ngt9gw2s99enl8odi20 
+       foreign key (id_user) 
+       references users [42001-214]
+2024-08-17 20:36:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    alter table if exists order_item \000a       add constraint FKt6wv8m7eshksp5kp8w4b2d1dm \000a       foreign key (order_id) \000a       references [*]order"; expected "identifier"; SQL statement:
+
+    alter table if exists order_item 
+       add constraint FKt6wv8m7eshksp5kp8w4b2d1dm 
+       foreign key (order_id) 
+       references order [42001-214]
+2024-08-17 20:39:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    create table [*]order (\000a        id bigint generated by default as identity,\000a        date_time timestamp(6),\000a        id_user bigint,\000a        primary key (id)\000a    )"; expected "identifier"; SQL statement:
+
+    create table order (
+        id bigint generated by default as identity,
+        date_time timestamp(6),
+        id_user bigint,
+        primary key (id)
+    ) [42001-214]
+2024-08-17 20:39:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    alter table if exists [*]order \000a       add constraint FKddb5m8ngt9gw2s99enl8odi20 \000a       foreign key (id_user) \000a       references users"; expected "identifier"; SQL statement:
+
+    alter table if exists order 
+       add constraint FKddb5m8ngt9gw2s99enl8odi20 
+       foreign key (id_user) 
+       references users [42001-214]
+2024-08-17 20:39:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    alter table if exists order_item \000a       add constraint FKt6wv8m7eshksp5kp8w4b2d1dm \000a       foreign key (order_id) \000a       references [*]order"; expected "identifier"; SQL statement:
+
+    alter table if exists order_item 
+       add constraint FKt6wv8m7eshksp5kp8w4b2d1dm 
+       foreign key (order_id) 
+       references order [42001-214]
+2024-08-17 20:40:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    create table [*]order (\000a        id bigint generated by default as identity,\000a        date_time timestamp(6),\000a        id_user bigint,\000a        primary key (id)\000a    )"; expected "identifier"; SQL statement:
+
+    create table order (
+        id bigint generated by default as identity,
+        date_time timestamp(6),
+        id_user bigint,
+        primary key (id)
+    ) [42001-214]
+2024-08-17 20:40:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    alter table if exists [*]order \000a       add constraint FKddb5m8ngt9gw2s99enl8odi20 \000a       foreign key (id_user) \000a       references users"; expected "identifier"; SQL statement:
+
+    alter table if exists order 
+       add constraint FKddb5m8ngt9gw2s99enl8odi20 
+       foreign key (id_user) 
+       references users [42001-214]
+2024-08-17 20:40:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    alter table if exists order_item \000a       add constraint FKt6wv8m7eshksp5kp8w4b2d1dm \000a       foreign key (order_id) \000a       references [*]order"; expected "identifier"; SQL statement:
+
+    alter table if exists order_item 
+       add constraint FKt6wv8m7eshksp5kp8w4b2d1dm 
+       foreign key (order_id) 
+       references order [42001-214]
+2024-08-17 20:40:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    create table [*]order (\000a        id bigint generated by default as identity,\000a        date_time timestamp(6),\000a        id_user bigint,\000a        primary key (id)\000a    )"; expected "identifier"; SQL statement:
+
+    create table order (
+        id bigint generated by default as identity,
+        date_time timestamp(6),
+        id_user bigint,
+        primary key (id)
+    ) [42001-214]
+2024-08-17 20:40:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    alter table if exists [*]order \000a       add constraint FKddb5m8ngt9gw2s99enl8odi20 \000a       foreign key (id_user) \000a       references users"; expected "identifier"; SQL statement:
+
+    alter table if exists order 
+       add constraint FKddb5m8ngt9gw2s99enl8odi20 
+       foreign key (id_user) 
+       references users [42001-214]
+2024-08-17 20:40:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    alter table if exists order_item \000a       add constraint FKt6wv8m7eshksp5kp8w4b2d1dm \000a       foreign key (order_id) \000a       references [*]order"; expected "identifier"; SQL statement:
+
+    alter table if exists order_item 
+       add constraint FKt6wv8m7eshksp5kp8w4b2d1dm 
+       foreign key (order_id) 
+       references order [42001-214]
+2024-08-17 20:41:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    create table [*]order (\000a        id bigint generated by default as identity,\000a        date_time timestamp(6),\000a        id_user bigint,\000a        primary key (id)\000a    )"; expected "identifier"; SQL statement:
+
+    create table order (
+        id bigint generated by default as identity,
+        date_time timestamp(6),
+        id_user bigint,
+        primary key (id)
+    ) [42001-214]
+2024-08-17 20:41:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    alter table if exists [*]order \000a       add constraint FKddb5m8ngt9gw2s99enl8odi20 \000a       foreign key (id_user) \000a       references users"; expected "identifier"; SQL statement:
+
+    alter table if exists order 
+       add constraint FKddb5m8ngt9gw2s99enl8odi20 
+       foreign key (id_user) 
+       references users [42001-214]
+2024-08-17 20:41:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    alter table if exists order_item \000a       add constraint FKt6wv8m7eshksp5kp8w4b2d1dm \000a       foreign key (order_id) \000a       references [*]order"; expected "identifier"; SQL statement:
+
+    alter table if exists order_item 
+       add constraint FKt6wv8m7eshksp5kp8w4b2d1dm 
+       foreign key (order_id) 
+       references order [42001-214]
+2024-08-17 20:44:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    create table [*]order (\000a        id bigint generated by default as identity,\000a        date_time timestamp(6),\000a        id_user bigint,\000a        primary key (id)\000a    )"; expected "identifier"; SQL statement:
+
+    create table order (
+        id bigint generated by default as identity,
+        date_time timestamp(6),
+        id_user bigint,
+        primary key (id)
+    ) [42001-214]
+2024-08-17 20:44:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    alter table if exists [*]order \000a       add constraint FKddb5m8ngt9gw2s99enl8odi20 \000a       foreign key (id_user) \000a       references users"; expected "identifier"; SQL statement:
+
+    alter table if exists order 
+       add constraint FKddb5m8ngt9gw2s99enl8odi20 
+       foreign key (id_user) 
+       references users [42001-214]
+2024-08-17 20:44:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    alter table if exists order_item \000a       add constraint FKt6wv8m7eshksp5kp8w4b2d1dm \000a       foreign key (order_id) \000a       references [*]order"; expected "identifier"; SQL statement:
+
+    alter table if exists order_item 
+       add constraint FKt6wv8m7eshksp5kp8w4b2d1dm 
+       foreign key (order_id) 
+       references order [42001-214]
+2024-08-17 20:47:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    create table [*]order (\000a        id bigint generated by default as identity,\000a        date_time timestamp(6),\000a        id_user bigint,\000a        primary key (id)\000a    )"; expected "identifier"; SQL statement:
+
+    create table order (
+        id bigint generated by default as identity,
+        date_time timestamp(6),
+        id_user bigint,
+        primary key (id)
+    ) [42001-214]
+2024-08-17 20:47:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    alter table if exists [*]order \000a       add constraint FKddb5m8ngt9gw2s99enl8odi20 \000a       foreign key (id_user) \000a       references users"; expected "identifier"; SQL statement:
+
+    alter table if exists order 
+       add constraint FKddb5m8ngt9gw2s99enl8odi20 
+       foreign key (id_user) 
+       references users [42001-214]
+2024-08-17 20:47:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    alter table if exists order_item \000a       add constraint FKt6wv8m7eshksp5kp8w4b2d1dm \000a       foreign key (order_id) \000a       references [*]order"; expected "identifier"; SQL statement:
+
+    alter table if exists order_item 
+       add constraint FKt6wv8m7eshksp5kp8w4b2d1dm 
+       foreign key (order_id) 
+       references order [42001-214]
+2024-08-17 20:56:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    create table [*]order (\000a        id bigint generated by default as identity,\000a        date_time timestamp(6),\000a        id_user bigint,\000a        primary key (id)\000a    )"; expected "identifier"; SQL statement:
+
+    create table order (
+        id bigint generated by default as identity,
+        date_time timestamp(6),
+        id_user bigint,
+        primary key (id)
+    ) [42001-214]
+2024-08-17 20:56:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    alter table if exists [*]order \000a       add constraint FKddb5m8ngt9gw2s99enl8odi20 \000a       foreign key (id_user) \000a       references users"; expected "identifier"; SQL statement:
+
+    alter table if exists order 
+       add constraint FKddb5m8ngt9gw2s99enl8odi20 
+       foreign key (id_user) 
+       references users [42001-214]
+2024-08-17 20:56:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    alter table if exists order_item \000a       add constraint FKt6wv8m7eshksp5kp8w4b2d1dm \000a       foreign key (order_id) \000a       references [*]order"; expected "identifier"; SQL statement:
+
+    alter table if exists order_item 
+       add constraint FKt6wv8m7eshksp5kp8w4b2d1dm 
+       foreign key (order_id) 
+       references order [42001-214]
+2024-08-17 20:58:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    create table [*]order (\000a        id bigint generated by default as identity,\000a        date_time timestamp(6),\000a        id_user bigint,\000a        primary key (id)\000a    )"; expected "identifier"; SQL statement:
+
+    create table order (
+        id bigint generated by default as identity,
+        date_time timestamp(6),
+        id_user bigint,
+        primary key (id)
+    ) [42001-214]
+2024-08-17 20:58:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    alter table if exists [*]order \000a       add constraint FK81y59eyskl6ku83ogfix6byr5 \000a       foreign key (id_user) \000a       references tb_user"; expected "identifier"; SQL statement:
+
+    alter table if exists order 
+       add constraint FK81y59eyskl6ku83ogfix6byr5 
+       foreign key (id_user) 
+       references tb_user [42001-214]
+2024-08-17 20:58:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    alter table if exists order_item \000a       add constraint FKt6wv8m7eshksp5kp8w4b2d1dm \000a       foreign key (order_id) \000a       references [*]order"; expected "identifier"; SQL statement:
+
+    alter table if exists order_item 
+       add constraint FKt6wv8m7eshksp5kp8w4b2d1dm 
+       foreign key (order_id) 
+       references order [42001-214]
+2024-08-17 21:10:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2024-08-17 21:13:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2024-08-17 21:13:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2024-08-17 21:14:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
